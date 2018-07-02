@@ -15,11 +15,13 @@ The biases are output first and then the parameters.  Each bias/parameter, layer
 Example below of output for 3 layer neural network with parameters and biases:
 
 <HDF5 group "/dense_4/dense_4" (2 members)>
+
 <HDF5 dataset "bias:0": shape (12,), type "<f4">
 Out[30]:
 array([-1.70428085,  0.        ,  1.18814325, -0.19041246, -0.00526408,
         1.40497196, -1.04222631,  0.92191911,  1.008322  ,  1.05576527,
        -1.52697325,  0.        ], dtype=float32)
+       
 <HDF5 dataset "kernel:0": shape (8, 12), type "<f4">
 Out[30]:
 array([[  2.79302388e-01,   1.88235305e-02,  -3.92339885e-01,
@@ -54,11 +56,14 @@ array([[  2.79302388e-01,   1.88235305e-02,  -3.92339885e-01,
          -3.17691535e-01,   2.14697719e-02,  -2.23892912e-01,
           1.80358887e-01,  -2.86986500e-01,  -2.77976334e-01,
          -9.47473720e-02,   1.37303680e-01,  -8.44306871e-03]], dtype=float32)
+         
 <HDF5 group "/dense_5/dense_5" (2 members)>
+
 <HDF5 dataset "bias:0": shape (8,), type "<f4">
 Out[30]:
 array([ 0.        ,  1.48242247, -1.26849794,  1.31229126,  1.38019633,
        -0.02828235, -0.02650108,  1.31731594], dtype=float32)
+       
 <HDF5 dataset "kernel:0": shape (12, 8), type "<f4">
 Out[30]:
 array([[  1.71101578e-02,  -1.35540264e-02,   3.77924502e-01,
@@ -97,10 +102,13 @@ array([[  1.71101578e-02,  -1.35540264e-02,   3.77924502e-01,
        [  4.04942036e-03,   4.97518294e-02,   6.92932680e-03,
           1.95994265e-02,  -4.20826785e-02,  -2.31025219e-02,
          -2.86299828e-02,   2.99803950e-02]], dtype=float32)
+         
 <HDF5 group "/dense_6/dense_6" (2 members)>
+
 <HDF5 dataset "bias:0": shape (1,), type "<f4">
 Out[30]:
 array([-1.18679988], dtype=float32)
+
 <HDF5 dataset "kernel:0": shape (8, 1), type "<f4">
 Out[30]:
 array([[ -1.67733654e-02],
