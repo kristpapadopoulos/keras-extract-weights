@@ -49,15 +49,23 @@ except ValueError as ve:
     
 else:
     weights = {}
+    
+    # each layer has a group
     for layer, group in f.items():
             weights[layer] = []
-
+        
+        # in the group the keys are the members: either the layer bias and/or parameters
         for p_name in group.keys():
             param = group[p_name]
-                # in the param group there are sub-keys first for parameters 
-                # then biases
-            for k_name in param.keys():
-                weights[layer].extend(param[k_name].value[:].flatten().tolist())
+            
+            # if the group has 0 members then the layer has no biases or parameters
+            if len(param) == 0:
+                weights[layers].extend(None)
+            else:
+                
+                # for each parameter in the layer added values to a list: order is first biases then parameters
+                for k_name in param.keys():
+                    weights[layer].extend(param[k_name].value[:].flatten().tolist())
        
 finally:
     f.close()
