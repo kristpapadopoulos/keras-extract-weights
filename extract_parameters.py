@@ -13,7 +13,7 @@ Args:
       
     csv_path (str):  CSV file with parameters and biases per layer  
 
-Date: May 4, 2018
+Date: July 2, 2018
 
 Author: Krist Papadopoulos
 
@@ -50,13 +50,12 @@ except ValueError as ve:
 else:
     weights = {}
     for layer, group in f.items():
-        if len(group) > 0:
             weights[layer] = []
 
         for p_name in group.keys():
             param = group[p_name]
                 # in the param group there are sub-keys first for parameters 
-                # then biases.
+                # then biases
             for k_name in param.keys():
                 weights[layer].extend(param[k_name].value[:].flatten().tolist())
        
