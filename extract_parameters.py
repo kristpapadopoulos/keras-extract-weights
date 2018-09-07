@@ -60,7 +60,7 @@ else:
             
             # if the group has 0 members then the layer has no biases or parameters
             if len(param) == 0:
-                weights[layers].extend(None)
+                weights[layer].extend(None)
             else:
                 
                 # for each parameter in the layer added values to a list: order is first biases then parameters
