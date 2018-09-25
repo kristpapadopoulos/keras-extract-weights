@@ -1,10 +1,8 @@
-## Keras Extract Weights from Model to CSV file
+### Keras Extract Weights from Model to CSV file
 
-Utilities for working with Keras models
+The file extract_parameters.py
 
-1.  extract_parameters.py
-
-- Takes Keras h5py model parameter file and outputs a csv file with model parameters per layer
+- takes Keras h5py model parameter file and outputs a csv file with model parameters per layer
 - extract_parameters.py --h5_path='file_path' --CSV_path='file_path'
 
 --------------------
@@ -12,7 +10,10 @@ Each Keras layer has a group that has members:  1 for the biases and 1 for the p
 
 The biases are output first and then the parameters.  Each bias/parameter, layer combination is appended to a list for that layer and output to a csv file.
 
-Example below of output for 3 layer neural network with parameters and biases:
+---------------------
+<b>Example</b>
+
+Output for 3 layer neural network with parameters and biases:
 
 <HDF5 group "/dense_4/dense_4" (2 members)>
 
