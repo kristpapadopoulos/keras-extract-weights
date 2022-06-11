@@ -7,7 +7,6 @@ https://github.com/keras-team/keras/issues/91
 
 Args:
     h5_path (str) : Path to the Keras model weights to analyze
-      
     output_path (str):  pkl output file path 
 
 Date: July 2, 2018 v0
